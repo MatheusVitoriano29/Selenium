@@ -59,7 +59,7 @@ if __name__ == '__main__':
             (By.ID, 'APjFqb')
         )
     )
-    search_input.send_keys('Hello World!')
+    search_input.send_keys('Clima tempo sbc')
     sleep(TIME_TO_WAIT)
     
     
