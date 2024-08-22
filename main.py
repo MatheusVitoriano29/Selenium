@@ -1,5 +1,5 @@
 # type: ignore
-# Selenium - Automatizando tarefas no navegador
+
 from pathlib import Path
 from time import sleep
 
@@ -10,9 +10,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
-# Caminho para a raiz do projeto
 ROOT_FOLDER = Path(__file__).parent
-# Caminho para a pasta onde o chromedriver está
+
 CHROME_DRIVER_PATH = ROOT_FOLDER / 'drivers' / 'chromedriver.exe'
 
 
@@ -50,9 +49,17 @@ if __name__ == '__main__':
     )
     search_input.send_keys('Clima tempo sbc')
     sleep(TIME_TO_WAIT)
-    
-    
+        
     search_input.send_keys(Keys.ENTER)
-    sleep(TIME_TO_WAIT)
+    sleep(8)
+
+    results = browser.find_element(By.ID, 'search')
+    links = results.find_elements(By.TAG_NAME, 'a')
+
+    sleep(7)
+
+    links[0].click()
+
+    sleep(7)
 
     
