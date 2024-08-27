@@ -4,7 +4,7 @@ Este projeto é um simples web scraper que utiliza o Selenium WebDriver para aut
 
 ## Pré-requisitos
 
-- Python 3.x
+- Python
 - Google Chrome
 - ChromeDriver
 
